@@ -1,0 +1,41 @@
+.floating-back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
+  cursor: pointer;
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: all var(--transition-normal);
+}
+
+.floating-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-back-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.5);
+}
+
+@media (max-width: 768px) {
+  .floating-back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 42px;
+    height: 42px;
+  }
+}

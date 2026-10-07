@@ -1,0 +1,10 @@
+@import './styles/variables.css';
+@import './styles/global.css';
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
